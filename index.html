@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <label><input type="text" placeholder="Nhập từ cần tra" id="word"></label>
+    <button onclick="tu_dien()">Check</button>
+    <h3 id="result"></h3>
+</div>
+<script>
+    function tu_dien() {
+        let arr = ['táo', 'chuối', 'sách', 'trường học', 'hành'];
+        arr.toString();
+        let arr2 = ['apple', 'banana', 'book', 'school', 'onion'];
+        arr2.toString();
+        let word = document.getElementById('word').value;
+        word.toString();
+        for (let i = 0; i < arr.length; i++) {
+
+            if (word === arr[i]) {
+                document.getElementById('result').innerHTML = arr2[i];
+                break;
+            } else {
+                document.getElementById('result').innerHTML = 'khong tim thay'
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
